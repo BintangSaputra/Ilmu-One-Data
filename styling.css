@@ -31,3 +31,18 @@
   display: flex;
   justify-content: center;
 }
+
+#product-img-three {
+  padding-left: 200px;
+  padding-top: 100px;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#desc {
+  margin-top: 88px;
+  margin-right: 200px;
+}
