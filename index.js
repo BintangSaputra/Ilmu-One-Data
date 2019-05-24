@@ -15,7 +15,7 @@ const displayContent = products => {
               <h5 class="card-title">${product.name}</h5>
               <p id="color-product" class="card-text">${product.color}</p>
               <p class="card-text">
-               ${product.price}
+               ${formatter.format(product.price)}
               </p>
             </div>
           </div>

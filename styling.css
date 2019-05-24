@@ -54,3 +54,35 @@
   margin-top: 88px;
   margin-right: 200px;
 }
+
+#content-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#size-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#content-title-one {
+  margin-bottom: 20px;
+}
+
+#content-color {
+  padding-bottom: 50px;
+}
+#content-price {
+  margin-bottom: 20px;
+}
+
+#size {
+  padding-top: 50px;
+}
+
+#quantity {
+  padding-top: 50px;
+}

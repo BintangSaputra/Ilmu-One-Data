@@ -9,7 +9,7 @@ const product = [
     name: "Product B",
     color: "BLACK",
     price: 200000,
-    image: "images/productfour.jpeg"
+    image: "images/productfour.jpg"
   },
   {
     name: "Product C",
