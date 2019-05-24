@@ -1,5 +1,6 @@
-const product = [
+const products = [
   {
+    id: 1,
     name: "Product A",
     color: "BLACK",
     price: 200000,

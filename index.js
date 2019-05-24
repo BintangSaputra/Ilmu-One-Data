@@ -7,9 +7,9 @@ const formatter = new Intl.NumberFormat("id-ID", {
 //=======================================================================================================
 
 const displayContent = products => {
-  products.forEach(product => {
+  products.forEach((product, index) => {
     let productDiv = `
-    <div class="card">
+    <div onclick="showDescription(${index})" class="card">
             <img src="${product.image}" class="card-img-top" alt="..." />
             <div id="card-home" class="card-body">
               <h5 class="card-title">${product.name}</h5>
@@ -24,4 +24,9 @@ const displayContent = products => {
     document.getElementById("object").innerHTML += productDiv;
   });
 };
-displayContent(product);
+displayContent(products);
+
+const showDescription = product => {
+  window.location.href = "/description";
+  localStorage.setItem("selectedProducts", JSON.stringify(products[product]));
+};

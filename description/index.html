@@ -16,18 +16,23 @@
 
   <body>
     <nav class="navbar navbar-light bg-white">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../index.html">
         <img src="/images/logo_transparent.png" width="80" height="80" alt="" />
       </a>
     </nav>
     <hr />
 
     <div id="content">
-      <img id="product-img-three" src="../images/productthree.jpeg" alt="" />
+      <img
+        id="product-img-three"
+        src="../images/productthree.jpeg"
+        alt=""
+        style="width: 600px; height: 100%"
+      />
       <div id="desc" class="card" style="width: 35rem;">
         <div class="card-body">
           <div id="content-one">
-            <h5 id="content-title-one" class="card-title">Product A</h5>
+            <h5 id="content-title-one" class="card-title"></h5>
             <h6 id="content-color" class="card-subtitle mb-2 text-muted">
               BLACK
             </h6>
@@ -47,12 +52,40 @@
               <button type="button" class="btn btn-outline-dark">L</button>
               <button type="button" class="btn btn-outline-dark">XL</button>
             </div>
-            <h6 id="quantity" class="card-subtitle mb-2 text-muted">
-              QUANTITY
-            </h6>
+            <div id="counter">
+              <h6 id="quantity" class="card-subtitle mb-2 text-muted">
+                QUANTITY
+              </h6>
+              <button id="minButton">-</button>
+              <input id="counterField" type="number" />
+              <button id="plusButton">+</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      let data = localStorage.getItem("selectedProducts");
+
+      data = JSON.parse(data);
+
+      document
+        .getElementById("product-img-three")
+        .setAttribute("src", `/${data["image"]}`);
+      // .getElementById("product-name");
+
+      document.getElementById("content-title-one").innerHTML = data.name;
+
+      const formatter = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0
+      });
+
+      document.getElementById("content-price").innerHTML = formatter.format(
+        data.price
+      );
+    </script>
   </body>
 </html>
