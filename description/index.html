@@ -91,6 +91,15 @@
       </div>
     </div>
     <script>
+      ga("ec:addImpression", {
+        id: "1",
+        name: "Product A",
+        color: "BLACK",
+        price: "200000",
+        position: 1
+      });
+      ga("send", "pageview");
+
       dataLayer.push({
         ecommerce: {
           currencyCode: "IDR",
