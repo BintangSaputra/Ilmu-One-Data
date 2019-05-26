@@ -82,45 +82,21 @@
 
       ga('ec:setAction','detail')
       ga('send','pageview')
-      // Product impressions are sent by pushing an impressions object
-      // containing one or more impressionFieldObjects
 
-      var products = [
-        {
+      dataLayer= [{
+        'pageType':'product',
+        'product':{
           category: "Shirts",
           id: "S12",
           name: "Product A",
           color: "BLACK",
           price: "200000",
           position: "1"
-        },
-        {
-          category: "Shirts",
-          id: "S13",
-          name: "Product B",
-          color: "BLACK",
-          price: "200000",
-          position: "2"
-        },
-        {
-          category: "Shirts",
-          id: "S14",
-          name: "Product B",
-          color: "BLACK",
-          price: "200000",
-          position: "2"
         }
-      ];
-      for (var i = 0; i < products.length; i++) {
-        products[i]["list"] = "Favorite";
-      }
-
-      dataLayer.push({
-        ecommerce: {
-          currencyCode: "IDR",
-          impressions: products
-        }
-      });
+      }]
+      
+       
+      
     </script>
 
     <!-- Google Tag Manager (noscript) -->
