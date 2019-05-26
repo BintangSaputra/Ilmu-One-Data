@@ -13,32 +13,33 @@
         'page_path':'/home'
       });
 
-      gtag("event", "view_item_list", {
-          items: [
-            {
-              id: "1",
-              name: "Product A",
-              color: "BLACK",
-              price: "200000",
-              position: 1
-            },
-            {
-              id: "2",
-              name: "Product B",
-              color: "BLACK",
-              price: "200000",
-              position: 2
-            },
-            {
-              id: "3",
-              name: "Product C",
-              color: "BLACK",
-              price: "200000",
-              position: 3
-            }
-          ]
-        });
+      // gtag("event", "view_item_list", {
+      //     items: [
+      //       {
+      //         id: "1",
+      //         name: "Product A",
+      //         color: "BLACK",
+      //         price: "200000",
+      //         position: 1
+      //       },
+      //       {
+      //         id: "2",
+      //         name: "Product B",
+      //         color: "BLACK",
+      //         price: "200000",
+      //         position: 2
+      //       },
+      //       {
+      //         id: "3",
+      //         name: "Product C",
+      //         color: "BLACK",
+      //         price: "200000",
+      //         position: 3
+      //       }
+      //     ]
+      //   });
 
+      gtag("config", "UA-140812393-1");
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,6 +66,62 @@
     <link rel="stylesheet" href="styling.css" />
   </head>
   <body>
+    <script>
+
+      ga('create','UA-140812393-1')
+      ga('require','ec')
+
+      ga('ec:addProduct',{
+         category: "Shirts",
+        id: "S12",
+        name: "Product A",
+        color: "BLACK",
+        price: "200000",
+        position: "1"
+      })
+
+      ga('ec:setAction','detail')
+      ga('send','pageview')
+      // Product impressions are sent by pushing an impressions object
+      // containing one or more impressionFieldObjects
+
+      // var products = [
+      //   {
+      //     category: "Shirts",
+      //     id: "S12",
+      //     name: "Product A",
+      //     color: "BLACK",
+      //     price: "200000",
+      //     position: "1"
+      //   },
+      //   {
+      //     category: "Shirts",
+      //     id: "S13",
+      //     name: "Product B",
+      //     color: "BLACK",
+      //     price: "200000",
+      //     position: "2"
+      //   },
+      //   {
+      //     category: "Shirts",
+      //     id: "S14",
+      //     name: "Product B",
+      //     color: "BLACK",
+      //     price: "200000",
+      //     position: "2"
+      //   }
+      // ];
+      // for (var i = 0; i < products.length; i++) {
+      //   products[i]["list"] = "Favorite";
+      // }
+
+      // dataLayer.push({
+      //   ecommerce: {
+      //     currencyCode: "IDR",
+      //     impressions: products
+      //   }
+      // });
+    </script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBFB4XV" height="0" width="0"
