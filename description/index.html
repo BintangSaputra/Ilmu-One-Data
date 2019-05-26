@@ -18,31 +18,31 @@
         page_path: "/description"
       });
 
-      gtag("event", "view_item_list", {
-        items: [
-          {
-            id: "1",
-            name: "Product A",
-            color: "BLACK",
-            price: 200000,
-            position: 1
-          },
-          {
-            id: "2",
-            name: "Product B",
-            color: "BLACK",
-            price: 200000,
-            position: 2
-          },
-          {
-            id: "3",
-            name: "Product C",
-            color: "BLACK",
-            price: 200000,
-            position: 3
-          }
-        ]
-      });
+      // gtag("event", "view_item_list", {
+      //   items: [
+      //     {
+      //       id: "1",
+      //       name: "Product A",
+      //       color: "BLACK",
+      //       price: 200000,
+      //       position: 1
+      //     },
+      //     {
+      //       id: "2",
+      //       name: "Product B",
+      //       color: "BLACK",
+      //       price: 200000,
+      //       position: 2
+      //     },
+      //     {
+      //       id: "3",
+      //       name: "Product C",
+      //       color: "BLACK",
+      //       price: 200000,
+      //       position: 3
+      //     }
+      //   ]
+      // });
 
       gtag("config", "UA-140812393-1");
     </script>
@@ -78,6 +78,30 @@
   </head>
 
   <body>
+    <script>
+      // Product impressions are sent by pushing an impressions object
+      // containing one or more impressionFieldObjects
+
+      var products = [
+        {
+          category: "Shirts",
+          name: "Product A",
+          color: "BLACK",
+          price: "200000",
+          position: "1"
+        }
+      ];
+      for (var i = 0; i < products.length; i++) {
+        products[i]["list"] = "Favorite";
+      }
+
+      dataLayer.push({
+        ecommerce: {
+          currencyCode: "IDR",
+          impressions: products
+        }
+      });
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
