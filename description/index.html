@@ -79,6 +79,20 @@
 
   <body>
     <script>
+      ga("create", "UA-140812393-1");
+      ga("require", "ec");
+
+      ga("ec:addProduct", {
+        category: "Shirts",
+        id: "S12",
+        name: "Product A",
+        color: "BLACK",
+        price: "200000",
+        position: "1"
+      });
+
+      ga("ec:setAction", "detail");
+      ga("send", "pageview");
       // Product impressions are sent by pushing an impressions object
       // containing one or more impressionFieldObjects
 
