@@ -82,21 +82,8 @@
       ga("create", "UA-140812393-1");
       ga("require", "ec");
 
-      ga("ec:addProduct", {
-        category: "Shirts",
-        id: "S12",
-        name: "Product A",
-        color: "BLACK",
-        price: "200000",
-        position: "1"
-      });
-
-      ga("ec:setAction", "detail");
-      ga("send", "pageview");
-      // Product impressions are sent by pushing an impressions object
-      // containing one or more impressionFieldObjects
-
-      var products = [
+      ga(
+        "ec:addProduct",
         {
           category: "Shirts",
           id: "S12",
@@ -108,7 +95,7 @@
         {
           category: "Shirts",
           id: "S13",
-          name: "Product B",
+          name: "Product A",
           color: "BLACK",
           price: "200000",
           position: "2"
@@ -116,20 +103,81 @@
         {
           category: "Shirts",
           id: "S14",
-          name: "Product B",
+          name: "Product A",
           color: "BLACK",
           price: "200000",
-          position: "2"
+          position: "3"
         }
-      ];
-      for (var i = 0; i < products.length; i++) {
-        products[i]["list"] = "Favorite";
-      }
+      );
+
+      ga("ec:setAction", "detail");
+      ga("send", "pageview");
+
+      ga("ec:setAction", "click", {
+        list: "Search Results"
+      });
+      // Product impressions are sent by pushing an impressions object
+      // containing one or more impressionFieldObjects
+
+      // var products = [
+      //   {
+      //     category: "Shirts",
+      //     id: "S12",
+      //     name: "Product A",
+      //     color: "BLACK",
+      //     price: "200000",
+      //     position: "1"
+      //   },
+      //   {
+      //     category: "Shirts",
+      //     id: "S13",
+      //     name: "Product B",
+      //     color: "BLACK",
+      //     price: "200000",
+      //     position: "2"
+      //   },
+      //   {
+      //     category: "Shirts",
+      //     id: "S14",
+      //     name: "Product B",
+      //     color: "BLACK",
+      //     price: "200000",
+      //     position: "2"
+      //   }
+      // ];
+      // for (var i = 0; i < products.length; i++) {
+      //   products[i]["list"] = "Favorite";
+      // }
 
       dataLayer.push({
         ecommerce: {
           currencyCode: "IDR",
-          impressions: products
+          impressions: [
+            {
+              category: "Shirts",
+              id: "S12",
+              name: "Product A",
+              color: "BLACK",
+              price: "200000",
+              position: "1"
+            },
+            {
+              category: "Shirts",
+              id: "S13",
+              name: "Product B",
+              color: "BLACK",
+              price: "200000",
+              position: "2"
+            },
+            {
+              category: "Shirts",
+              id: "S14",
+              name: "Product B",
+              color: "BLACK",
+              price: "200000",
+              position: "2"
+            }
+          ]
         }
       });
     </script>
