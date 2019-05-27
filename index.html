@@ -96,6 +96,30 @@
           position: "3"
         })
 
+  ga('ec:addImpression', {
+    category: "Shirts",
+    id: "S12",
+    name: "Product A",
+    color: "BLACK",
+    price: "200000",
+    position: "1"
+  },
+    {
+      category: "Shirts",
+      id: "S13",
+      name: "Product A",
+      color: "BLACK",
+      price: "200000",
+      position: "2"
+    },
+    {
+      category: "Shirts",
+      id: "S14",
+      name: "Product A",
+      color: "BLACK",
+      price: "200000",
+      position: "3"
+    })
       ga('ecommerce:send')
       ga('ec:setAction','detail')
       ga('send','pageview')
