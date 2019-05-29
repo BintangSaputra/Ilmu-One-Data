@@ -125,22 +125,22 @@
       position:'3'   
     })
 
-  // function onProductClick() {
-  //   ga("ec:addProduct", {
-  //     category: "Shirts",
-  //     id: "S12",
-  //     name: "Product A",
-  //     color: "BLACK",
-  //     price: "200000",
-  //     position: "1"
-  //   });
-  // }
+  function onProductClick() {
+    ga("ec:addProduct", {
+      category: "Shirts",
+      id: "S12",
+      name: "Product A",
+      color: "BLACK",
+      price: "200000",
+      position: "1"
+    });
+  }
 
-  // ga("send", "event", "UX", "click", "Results", {
-  //   hitCallback: function () {
-  //     document.location = "/product_details?id=S12";
-  //   }
-  // });
+  ga("send", "event", "UX", "click", "Results", {
+    hitCallback: function () {
+      document.location = "/description/";
+    }
+  });
 
   // function onProductClick() {
   //   ga("ec:addProduct", {
