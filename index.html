@@ -160,7 +160,8 @@
       //   products[i]["list"] = "Favorite";
       // }
 
-      dataLayer.push({
+      window.dataLayer.push({
+        event: "ecommerce",
         ecommerce: {
           currencyCode: "IDR",
           impressions: [{
