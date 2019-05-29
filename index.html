@@ -250,6 +250,28 @@
           
         }
       });
+
+      function clickProduct(productObj) {
+        dataLayer.push({
+          'event':'productClick',
+          'ecommerce':{
+            'click':{
+              'actionField':{'list':'Search Results'},
+              'products':[{
+                'category': productObj.category,
+                'id':productObj.id,
+                'name':productObj.name,
+                'color':productObj.color,
+                'price':productObj.price,
+                'position':productObj.position
+              }]
+            }
+          },
+          'eventCallback': function(){
+            document.location = productObj.url
+          }
+        })
+      }
     </script>
 
     <!-- Google Tag Manager (noscript) -->
