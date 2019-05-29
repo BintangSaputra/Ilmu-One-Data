@@ -164,14 +164,15 @@
         event: "ecommerce",
         ecommerce: {
           currencyCode: "IDR",
-          impressions: [{
-            category: "Shirts",
-            id: "S12",
-            name: "Product A",
-            color: "BLACK",
-            price: "200000",
-            position: "1"
-          },
+          'detail': {
+            'product': [{
+              category: "Shirts",
+              id: "S12",
+              name: "Product A",
+              color: "BLACK",
+              price: "200000",
+              position: "1"
+            },
             {
               category: "Shirts",
               id: "S13",
@@ -188,6 +189,8 @@
               price: "200000",
               position: "2"
             }]
+          }
+          
         }
       });
     </script>
