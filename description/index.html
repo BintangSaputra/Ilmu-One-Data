@@ -82,33 +82,32 @@
       ga("create", "UA-140812393-1");
       ga("require", "ec");
 
-      ga(
-        "ec:addProduct",
-        {
-          category: "Shirts",
-          id: "S12",
-          name: "Product A",
-          color: "BLACK",
-          price: "200000",
-          position: "1"
-        },
-        {
-          category: "Shirts",
-          id: "S13",
-          name: "Product A",
-          color: "BLACK",
-          price: "200000",
-          position: "2"
-        },
-        {
-          category: "Shirts",
-          id: "S14",
-          name: "Product A",
-          color: "BLACK",
-          price: "200000",
-          position: "3"
-        }
-      );
+      ga("ec:addProduct", {
+        category: "Shirts",
+        id: "S12",
+        name: "Product A",
+        color: "BLACK",
+        price: "200000",
+        position: "1"
+      });
+
+      ga("ec:addProduct", {
+        category: "Shirts",
+        id: "S13",
+        name: "Product B",
+        color: "BLACK",
+        price: "200000",
+        position: "2"
+      });
+
+      ga("ec:addProduct", {
+        category: "Shirts",
+        id: "S14",
+        name: "Product C",
+        color: "BLACK",
+        price: "200000",
+        position: "3"
+      });
 
       ga("ec:addImpression", {
         category: "Shirts",
@@ -272,33 +271,6 @@
       </div>
     </div>
     <script>
-      ga("ec:addImpression", {
-        id: "1",
-        name: "Product A",
-        color: "BLACK",
-        price: "200000",
-        position: 1
-      });
-
-      ga("ec:addImpression", {
-        category: "Shirts",
-        id: "S13",
-        name: "Product B",
-        color: "BLACK",
-        price: "200000",
-        position: "2"
-      });
-
-      ga("ec:addImpression", {
-        category: "Shirts",
-        id: "S14",
-        name: "Product C",
-        color: "BLACK",
-        price: "200000",
-        position: "3"
-      });
-      ga("send", "pageview");
-
       dataLayer.push({
         ecommerce: {
           currencyCode: "IDR",
