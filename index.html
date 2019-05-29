@@ -125,6 +125,57 @@
       position:'3'   
     })
 
+  function onProductClick() {
+    ga("ec:addProduct", {
+      category: "Shirts",
+      id: "S12",
+      name: "Product A",
+      color: "BLACK",
+      price: "200000",
+      position: "1"
+    });
+  }
+
+  ga("send", "event", "UX", "click", "Results", {
+    hitCallback: function () {
+      document.location = "/product_details?id=S12";
+    }
+  });
+
+  function onProductClick() {
+    ga("ec:addProduct", {
+      category: "Shirts",
+      id: "S13",
+      name: "Product B",
+      color: "BLACK",
+      price: "200000",
+      position: "2"
+    });
+  }
+
+  ga("send", "event", "UX", "click", "Results", {
+    hitCallback: function () {
+      document.location = "/product_details?id=S13";
+    }
+  });
+
+  function onProductClick() {
+    ga("ec:addProduct", {
+      category: "Shirts",
+      id: "S14",
+      name: "Product C",
+      color: "BLACK",
+      price: "200000",
+      position: "3"
+    });
+  }
+
+  ga("send", "event", "UX", "click", "Results", {
+    hitCallback: function () {
+      document.location = "/product_details?id=S14";
+    }
+  });
+  
       ga('ecommerce:send')
       ga('ec:setAction','detail')
       ga('send','pageview')
